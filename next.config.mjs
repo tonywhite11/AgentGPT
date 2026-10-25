@@ -1,4 +1,4 @@
-import { withSentryConfig } from "@sentry/nextjs";
+import { withSentryConfig } from "@sentry/nextjs/config";
 // @ts-check
 /**
  * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation.
@@ -26,8 +26,8 @@ export default withSentryConfig(config, {
   silent: true,
   org: "reworkd",
   project: "agentgpt",
-  }, {
-  // For all available options, see  https://docs.sentry.io/platforms/javascript/guides/nextjs/manual-setup/
+
+  // For all available options, see https://docs.sentry.io/platforms/javascript/guides/nextjs/manual-setup/
   // Upload a larger set of source maps for prettier stack traces (increases build time)
   widenClientFileUpload: true,
 
